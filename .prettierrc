@@ -1,0 +1,27 @@
+{
+    "semi": true,
+    "useTabs": false,
+    "tabWidth": 4,
+    "arrowParens": "avoid",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "singleQuote": true,
+    "trailingComma": "all",
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ],
+    "tailwindAttributes": [
+        "class",
+        "className",
+        "ngClass",
+        ".*[cC]lassName"
+    ],
+    "tailwindFunctions": [
+        "clsx",
+        "cn"
+    ]
+}
