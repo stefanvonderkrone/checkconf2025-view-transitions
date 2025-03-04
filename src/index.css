@@ -27,3 +27,11 @@ body {
     height: 100%;
     background-color: #000;
 }
+
+h1 {
+    @apply text-[3rem] font-bold text-[#FFBB1C];
+}
+
+h3 {
+    @apply h-2 text-[2.125rem] text-white;
+}
