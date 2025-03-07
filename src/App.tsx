@@ -25,7 +25,7 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        invertLogo
+        lightMode
         background={
             <div className="flex h-full w-full flex-row">
                 <div className="h-full flex-1 bg-[#063773]" />
@@ -34,27 +34,43 @@ const SLIDES = [
         }
     >
         <h1>App vs. Web</h1>
+        <p>TODO: show video of app navigation vs video of web navigation</p>
+        <p>QUESTION: can we have nice transitions in web as well?</p>
     </Slide>,
 
-    <Slide invertLogo>
+    <Slide lightMode>
         <h1>Previous Solutions</h1>
         <ul>
             <li>React Transition Group</li>
             <li>GSAP</li>
             <li>Framer Motion</li>
+            <li>
+                Cons: these are either tied to a framework or add a bulk of code
+                to the bundle
+            </li>
         </ul>
     </Slide>,
 
-    <Slide invertLogo>
+    <Slide lightMode>
         <h1>Some examples</h1>
         <ul>
-            <li>Simple</li>
+            <li>Simple Fade In</li>
             <li>Slide In</li>
-            <li>Slide To Key Visual</li>
+            <li>Hero transition</li>
+        </ul>
+        <p>TODO: show all three transitions</p>
+    </Slide>,
+
+    <Slide lightMode>
+        <h1>Benefits</h1>
+        <ul>
+            <li>reduced cognitive load</li>
+            <li>perceived performance</li>
+            <li>enhanced engagement</li>
         </ul>
     </Slide>,
 
-    <Slide invertLogo>
+    <Slide lightMode>
         <h1>View Transition Basics</h1>
         <ul>
             <li>Focus On Same Document View Transitions</li>
@@ -63,7 +79,9 @@ const SLIDES = [
             <code>
                 {`
 const transition = document.startViewTransition(() => {
-    updateTheDom();
+    // a snapshot of the old view was generated
+    updateTheDom(); // may be asynchonously
+    // a snapshot of the new view will be generated
 })
 `}
             </code>
@@ -72,10 +90,10 @@ const transition = document.startViewTransition(() => {
             <code>
                 {`
 ::view-transition,
-::view-transition-group(root),
-::view-transition-image-pair(root),
-::view-transition-old(root),
-::view-transition-new(root) {
+  ::view-transition-group(root),
+    ::view-transition-image-pair(root),
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
     /* define animation here */
 }
 `}
@@ -83,7 +101,40 @@ const transition = document.startViewTransition(() => {
         </pre>
     </Slide>,
 
-    <h1 className="text-white">Slide 7</h1>,
+    <Slide lightMode>
+        <h1>Terminology</h1>
+        <ul>
+            <li>document.startViewTransition()</li>
+            <li>ViewTransition Result</li>
+            <li>::view-transition pseudo elements</li>
+            <li>view-transition-name CSS property</li>
+        </ul>
+    </Slide>,
+
+    <Slide lightMode>
+        <h1>Back to our examples</h1>
+        <p>
+            TODO: show each of the previous examples and dissect them with code
+        </p>
+    </Slide>,
+
+    <Slide lightMode>
+        <h1>UX Considerations</h1>
+        <ul>
+            <li>keep it simple</li>
+            <li>respect prefers-reduced-motion</li>
+            <li>Progressive enhancement</li>
+        </ul>
+    </Slide>,
+
+    <Slide lightMode>
+        <h1>The end</h1>
+        <ul>
+            <li>
+                Link to this repo and a README with additional material/links
+            </li>
+        </ul>
+    </Slide>,
 ];
 
 function App() {

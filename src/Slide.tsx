@@ -1,12 +1,15 @@
 import { FC, ReactNode } from 'react';
 import CheckConf from './assets/check_conf.svg';
 import CheckConf2 from './assets/check_conf_2.svg';
+import { useSlidesRouterContext } from './SlidesRouterContext';
+import { cn } from './cn';
 
 const Slide: FC<{
     background?: ReactNode;
     children: ReactNode;
-    invertLogo?: boolean;
-}> = ({ background, children, invertLogo = false }) => {
+    lightMode?: boolean;
+}> = ({ background, children, lightMode = false }) => {
+    const { currentSlide } = useSlidesRouterContext();
     return (
         <div className="relative h-full w-full">
             <div className="absolute top-0 left-0 z-0 h-full w-full bg-white">
@@ -21,9 +24,20 @@ const Slide: FC<{
                 <img
                     alt="CHECK.conf logo"
                     className="w-64"
-                    src={invertLogo ? CheckConf2 : CheckConf}
+                    src={lightMode ? CheckConf2 : CheckConf}
                 />
             </picture>
+
+            <div
+                className={cn(
+                    'absolute bottom-4 left-1/2 z-20 -translate-x-1/2',
+                    {
+                        'text-white': !lightMode,
+                    },
+                )}
+            >
+                <span>{currentSlide + 1}</span>
+            </div>
         </div>
     );
 };

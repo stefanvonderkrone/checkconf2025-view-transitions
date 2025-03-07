@@ -8,6 +8,7 @@ import {
     useSyncExternalStore,
 } from 'react';
 import { Deferred } from './Deferred';
+import { SlidesRouterContext } from './SlidesRouterContext';
 
 const SlidesRouter: FC<{ slides: ReactElement[] }> = ({ slides }) => {
     const history = useMemo(() => createBrowserHistory(), []);
@@ -114,7 +115,13 @@ const SlidesRouter: FC<{ slides: ReactElement[] }> = ({ slides }) => {
         [history, slideIndex, slides.length],
     );
 
-    return slides[slideIndex];
+    return (
+        <SlidesRouterContext
+            value={{ currentSlide: slideIndex, numSlides: slides.length }}
+        >
+            {slides[slideIndex]}
+        </SlidesRouterContext>
+    );
 };
 
 export default SlidesRouter;
