@@ -64,19 +64,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide lightMode>
-        <h1>Previous Solutions</h1>
-        <ul>
-            <li>React Transition Group</li>
-            <li>GSAP</li>
-            <li>Framer Motion</li>
-            <li>
-                Cons: these are either tied to a framework or add a bulk of code
-                to the bundle
-            </li>
-        </ul>
-    </Slide>,
-
-    <Slide lightMode>
         <h1>Some examples</h1>
         <ul>
             <li>Simple Fade In</li>
@@ -96,51 +83,27 @@ const SLIDES = [
     </Slide>,
 
     <Slide lightMode>
-        <h1>View Transition Basics</h1>
+        <h1>How do View Transitions work?</h1>
         <ul>
-            <li>Focus On Same Document View Transitions</li>
+            <li>have a new ViewState</li>
+            <li>
+                call <code>document.startViewTransition()</code>
+            </li>
+            <li>Win!</li>
+            <li>fade in example</li>
         </ul>
-        <pre>
-            <code>
-                {`
-const transition = document.startViewTransition(() => {
-    // a snapshot of the old view was generated
-    updateTheDom(); // may be asynchonously
-    // a snapshot of the new view will be generated
-})
-`}
-            </code>
-        </pre>
-        <pre>
-            <code>
-                {`
-::view-transition,
-  ::view-transition-group(root),
-    ::view-transition-image-pair(root),
-      ::view-transition-old(root),
-      ::view-transition-new(root) {
-    /* define animation here */
-}
-`}
-            </code>
-        </pre>
     </Slide>,
 
     <Slide lightMode>
-        <h1>Terminology</h1>
+        <h1>How do they actually work?</h1>
         <ul>
             <li>document.startViewTransition()</li>
             <li>ViewTransition Result</li>
             <li>::view-transition pseudo elements</li>
             <li>view-transition-name CSS property</li>
+            <li>slide in example</li>
+            <li>hero transition example</li>
         </ul>
-    </Slide>,
-
-    <Slide lightMode>
-        <h1>Back to our examples</h1>
-        <p>
-            TODO: show each of the previous examples and dissect them with code
-        </p>
     </Slide>,
 
     <Slide lightMode>

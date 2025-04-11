@@ -35,3 +35,39 @@ h1 {
 h3 {
     @apply h-2 text-[2.125rem] text-white;
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+    z-index: 1;
+    animation: none;
+}
+
+::view-transition-new(root) {
+    z-index: 2;
+    animation: star-wars-circle-in 1.2s ease-in-out forwards;
+}
+
+@keyframes star-wars-diagonal-in {
+    0% {
+        clip-path: polygon(120% 0%, 220% 0%, 200% 100%, 100% 100%);
+    }
+
+    100% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -20% 100%)
+    }
+}
+
+@keyframes star-wars-circle-in {
+    0% {
+        clip-path: circle(0%);
+    }
+
+    100% {
+        clip-path: circle(100%);
+    }
+}
