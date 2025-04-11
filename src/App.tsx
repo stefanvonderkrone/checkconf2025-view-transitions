@@ -1,7 +1,26 @@
+import Level from './Level';
 import Slide from './Slide';
 import SlidesRouter from './SlidesRouter';
 import KeyVisual from './assets/key_visual.gif';
 import LevelUp from './assets/level_up.svg';
+
+const SCREEN_01 = [
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '111111111111111111111111111',
+    '232323232323232323232323232',
+].join('\n');
 
 const SLIDES = [
     <Slide
@@ -33,6 +52,12 @@ const SLIDES = [
             </div>
         }
     >
+        <Level
+            tileSize={18}
+            background={null}
+            blueprint={SCREEN_01}
+            pixelScale={2}
+        />
         <h1>App vs. Web</h1>
         <p>TODO: show video of app navigation vs video of web navigation</p>
         <p>QUESTION: can we have nice transitions in web as well?</p>
@@ -141,6 +166,13 @@ function App() {
     return (
         <main className="relative mx-auto h-[67.5rem] w-[120rem]">
             <SlidesRouter slides={SLIDES} />
+            <svg>
+                <defs>
+                    <mask id="circle-mask">
+                        <circle cx="0" cy="0" r="10" fill="#000" />
+                    </mask>
+                </defs>
+            </svg>
         </main>
     );
 }
