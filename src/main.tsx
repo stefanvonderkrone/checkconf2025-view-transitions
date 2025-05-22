@@ -14,7 +14,17 @@ window.addEventListener('keypress', e => {
     }
 });
 
-createRoot(document.getElementById('root')!).render(
+const root = document.querySelector<HTMLDivElement>('#root');
+if (!root) {
+    throw new Error('no root');
+}
+
+window.addEventListener('resize', () => {
+    root.style.setProperty('zoom', (window.innerWidth / 1920).toString());
+});
+window.dispatchEvent(new UIEvent('resize'));
+
+createRoot(root).render(
     <StrictMode>
         <App />
     </StrictMode>,

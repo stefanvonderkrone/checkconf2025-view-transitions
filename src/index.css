@@ -1,15 +1,24 @@
 @import 'tailwindcss';
 
-:root {
-    --x-aspect-ratio: calc(100% / 16 * 9);
-    font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: PixelFont;
+    font-style: normal;
+    src: url('/fonts/Pixellari.ttf');
+}
 
-    /* screen dependent font sizing */
-    --font-size-w: calc(16 / 1920 * 100vw);
-    --font-size-h: calc(16 / 1080 * 100vh);
-    font-size: min(var(--font-size-w), var(--font-size-h));
+@font-face {
+    font-family: PixelCode;
+    font-style: normal;
+    src: url('/fonts/PixelCode.ttf');
+}
 
-    --spacing: calc(4rem / 16);
+@utility pixelated {
+    image-rendering: pixelated;
+}
+
+@theme {
+    --default-font-family: 'PixelFont';
+    --default-mono-font-family: 'PixelCode';
 }
 
 html {
@@ -29,37 +38,115 @@ body {
 }
 
 h1 {
-    @apply text-[3rem] font-bold text-[#FFBB1C];
+    @apply text-[48px] font-bold;
 }
 
 h3 {
-    @apply h-2 text-[2.125rem] text-white;
+    @apply h-[8px] text-[34px];
 }
 
+::view-transition-group(root),
 ::view-transition-old(root),
 ::view-transition-new(root) {
     animation: none;
     mix-blend-mode: normal;
 }
 
-::view-transition-old(root) {
+::view-transition-old(*) {
     z-index: 1;
     animation: none;
 }
 
-::view-transition-new(root) {
+::view-transition-new(*) {
     z-index: 2;
-    animation: star-wars-circle-in 1.2s ease-in-out forwards;
+    mix-blend-mode: normal;
 }
 
-@keyframes star-wars-diagonal-in {
+::view-transition-new(slides-track),
+::view-transition-old(slides-track),
+::view-transition-new(slides-progress),
+::view-transition-old(slides-progress) {
+    animation: none;
+    z-index: 10;
+    mix-blend-mode: normal;
+}
+
+::view-transition-new(slides-progress) {
+    transition:
+        width 500ms,
+        height 500ms;
+}
+
+::view-transition-new(do-nothing) {
+    animation: none;
+    opacity: 0;
+}
+
+::view-transition-old(do-nothing) {
+    animation: none;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+::view-transition-new(fade-in-code),
+::view-transition-new(fade-in) {
+    animation: fade-in 500ms ease-in-out forwards;
+}
+
+@keyframes slide-from-left {
+    from {
+        transform: translateX(-100%);
+    }
+}
+
+::view-transition-new(slide-from-left) {
+    animation: slide-from-left 1.2s ease-in-out forwards;
+}
+
+@keyframes slide-from-right {
+    from {
+        transform: translateX(100%);
+    }
+}
+
+::view-transition-new(slide-from-right) {
+    animation: slide-from-right 1.2s ease-in-out forwards;
+}
+
+::view-transition-new(slide-from-right-react-example) {
+    animation: slide-from-right 500ms ease-in-out forwards;
+}
+
+@keyframes star-wars-simple-from-left {
+    0% {
+        clip-path: polygon(-120% 0%, -20% 0%, 0% 100%, -100% 100%);
+    }
+
+    100% {
+        clip-path: polygon(0% 0%, 100% 0%, 120% 100%, 0% 100%);
+    }
+}
+
+::view-transition-new(star-wars-simple-from-left) {
+    animation: star-wars-simple-from-left 1.2s ease-in-out forwards;
+}
+
+@keyframes star-wars-simple-from-right {
     0% {
         clip-path: polygon(120% 0%, 220% 0%, 200% 100%, 100% 100%);
     }
 
     100% {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -20% 100%)
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -20% 100%);
     }
+}
+
+::view-transition-new(star-wars-simple-from-right) {
+    animation: star-wars-simple-from-right 1.2s ease-in-out forwards;
 }
 
 @keyframes star-wars-circle-in {
@@ -71,3 +158,89 @@ h3 {
         clip-path: circle(100%);
     }
 }
+
+::view-transition-new(star-wars-circle-in) {
+    animation: star-wars-circle-in 1.2s ease-in-out forwards;
+}
+
+@keyframes star-wars-circle-out {
+    0% {
+        clip-path: circle(100%);
+    }
+
+    100% {
+        clip-path: circle(0%);
+    }
+}
+
+::view-transition-new(star-wars-circle-out) {
+    animation: star-wars-circle-out 1.2s ease-in-out forwards;
+}
+
+@layer code {
+    .-variable-parameter {
+        color: #eba0ac;
+    }
+    .-constructor-tsx {
+        color: #b4befe;
+    }
+    .Type {
+        color: #f9e2af;
+    }
+    .Keyword {
+        color: #cba6f7;
+    }
+    .-constant-builtin {
+        color: #fab387;
+    }
+    .-type-builtin {
+        color: #f9e2af;
+    }
+    .-keyword-export {
+        color: #89dceb;
+    }
+    .-punctuation-bracket {
+        color: #9399b2;
+    }
+    .Delimiter {
+        color: #9399b2;
+    }
+    .String {
+        color: #a6e3a1;
+    }
+    .NonText {
+        color: #6c7086;
+    }
+    .Operator {
+        color: #89dceb;
+    }
+    .Conditional {
+        color: #cba6f7;
+        font-style: italic;
+    }
+    .-variable-member {
+        color: #b4befe;
+    }
+    .-spell {
+    }
+    .Comment {
+        color: #9399b2;
+        font-style: italic;
+    }
+    .Include {
+        color: #cba6f7;
+    }
+    .-variable {
+        color: #cdd6f4;
+    }
+    .Function {
+        color: #89b4fa;
+    }
+    .-variable-builtin {
+        color: #f38ba8;
+    }
+    .-keyword-return {
+        color: #cba6f7;
+    }
+}
+

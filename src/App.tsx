@@ -1,8 +1,15 @@
-import Level from './Level';
+import { FC, ReactNode } from 'react';
+import { Backgrounds } from './Backgrounds';
 import Slide from './Slide';
 import SlidesRouter from './SlidesRouter';
 import KeyVisual from './assets/key_visual.gif';
 import LevelUp from './assets/level_up.svg';
+import { cn } from './cn';
+import iosNative from './assets/videos/ios_native.mp4';
+import iosWebapp from './assets/videos/ios_webapp.mp4';
+import iosWebappViewTransitions from './assets/videos/ios_webapp_view_transitions.mp4';
+import { StartViewTransition } from './examples/StartViewTransition';
+import { UseViewTransition } from './examples/UseViewTransition';
 
 const SCREEN_01 = [
     '',
@@ -22,6 +29,38 @@ const SCREEN_01 = [
     '232323232323232323232323232',
 ].join('\n');
 
+const BackgroundImage: FC<{ src: string; className?: string }> = ({
+    src,
+    className,
+}) => (
+    <img
+        src={src}
+        width={1920}
+        height={1080}
+        className={cn('pixelated block h-full w-full', className)}
+    />
+);
+
+const ContentBox: FC<{
+    className?: string;
+    children: ReactNode;
+    invert?: boolean;
+}> = ({ className, children, invert = false }) => (
+    <div
+        className={cn(
+            'drop-shadow-2xl[&_p]:text-amber-900 absolute flex h-full flex-col items-center justify-center gap-[24px] bg-sky-100 px-16 text-amber-950',
+            className,
+            {
+                '[&_h1]:text-amber-500': invert,
+                '[&_p]:text-sky-100': invert,
+                'bg-amber-950': invert,
+            },
+        )}
+    >
+        {children}
+    </div>
+);
+
 const SLIDES = [
     <Slide
         background={
@@ -35,78 +74,375 @@ const SLIDES = [
         }
     >
         <picture>
-            <img alt="level up" src={LevelUp} className="w-[36.25rem]" />
+            <img alt="level up" src={LevelUp} className="w-[580px]" />
         </picture>
         <h1>Stop the Flash, Start the Flow</h1>
-        <hr className="w-[57.5rem] border-[0.125rem] border-white" />
+        <hr className="w-[920px] border-[2px] border-white" />
         <h3>Leveling Up with View Transitions</h3>
         <h3>Stefan von der Krone | 28/06/24 | 14:00 Uhr</h3>
     </Slide>,
 
     <Slide
         lightMode
-        background={
-            <div className="flex h-full w-full flex-row">
-                <div className="h-full flex-1 bg-[#063773]" />
-                <div className="h-full flex-1 bg-white" />
-            </div>
-        }
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds1} />}
     >
-        <Level
-            tileSize={18}
-            background={null}
-            blueprint={SCREEN_01}
-            pixelScale={2}
-        />
-        <h1>App vs. Web</h1>
-        <p>TODO: show video of app navigation vs video of web navigation</p>
-        <p>QUESTION: can we have nice transitions in web as well?</p>
+        <ContentBox className="left-1/3 w-1/3">
+            <h1>App vs. Web</h1>
+            <p>smooth UI transitions</p>
+            <p>perception of good performance</p>
+        </ContentBox>
     </Slide>,
 
-    <Slide lightMode>
-        <h1>Some examples</h1>
-        <ul>
-            <li>Simple Fade In</li>
-            <li>Slide In</li>
-            <li>Hero transition</li>
-        </ul>
-        <p>TODO: show all three transitions</p>
+    <Slide background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}>
+        <ContentBox className="left-0 w-1/3">
+            <h1>App</h1>
+            <video className="w-1/2 rounded-4xl border-0 drop-shadow-lg">
+                <source src={iosNative} />
+            </video>
+        </ContentBox>
+        <ContentBox className="left-2/3 w-1/3">
+            <h1>Web</h1>
+            <video className="w-1/2 rounded-4xl border-0 drop-shadow-lg">
+                <source src={iosWebapp} />
+            </video>
+        </ContentBox>
     </Slide>,
 
-    <Slide lightMode>
-        <h1>Benefits</h1>
-        <ul>
-            <li>reduced cognitive load</li>
-            <li>perceived performance</li>
-            <li>enhanced engagement</li>
-        </ul>
+    <Slide background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}>
+        <ContentBox className="left-0 w-1/3">
+            <h1>App</h1>
+            <video
+                key="play"
+                autoPlay
+                className="w-1/2 rounded-4xl border-0 drop-shadow-lg"
+            >
+                <source src={iosNative} />
+            </video>
+        </ContentBox>
+        <ContentBox className="left-2/3 w-1/3 opacity-50">
+            <h1>Web</h1>
+            <video className="w-1/2 rounded-4xl border-0 drop-shadow-lg">
+                <source src={iosWebapp} />
+            </video>
+        </ContentBox>
     </Slide>,
 
-    <Slide lightMode>
-        <h1>How do View Transitions work?</h1>
-        <ul>
-            <li>have a new ViewState</li>
-            <li>
-                call <code>document.startViewTransition()</code>
-            </li>
-            <li>Win!</li>
-            <li>fade in example</li>
-        </ul>
+    <Slide background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}>
+        <ContentBox className="left-0 w-1/3 opacity-50">
+            <h1>App</h1>
+            <video
+                key="stop"
+                className="w-1/2 rounded-4xl border-0 drop-shadow-lg"
+            >
+                <source src={iosNative} />
+            </video>
+        </ContentBox>
+        <ContentBox className="left-2/3 w-1/3">
+            <h1>Web</h1>
+            <video
+                key="play"
+                autoPlay
+                className="w-1/2 rounded-4xl border-0 drop-shadow-lg"
+            >
+                <source src={iosWebapp} />
+            </video>
+        </ContentBox>
     </Slide>,
 
-    <Slide lightMode>
-        <h1>How do they actually work?</h1>
-        <ul>
-            <li>document.startViewTransition()</li>
-            <li>ViewTransition Result</li>
-            <li>::view-transition pseudo elements</li>
-            <li>view-transition-name CSS property</li>
-            <li>slide in example</li>
-            <li>hero transition example</li>
-        </ul>
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds2} />}
+    >
+        <ContentBox className="left-0 w-1/3">
+            <h1>View Transitions</h1>
+            <p>Reduced cognitive load</p>
+            <p>Perceived performance</p>
+            <p>Enhanced engagement</p>
+        </ContentBox>
     </Slide>,
 
-    <Slide lightMode>
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds3} />}
+    >
+        <ContentBox invert>
+            <h1>Examples of View Transitions</h1>
+            <p>Simple fade-in</p>
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="slide-from-left"
+    >
+        <ContentBox className="right-0">
+            <h1>Examples of View Transitions</h1>
+            <p>Slide from left</p>
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds5} />}
+        viewTransitionName="slide-from-right"
+    >
+        <ContentBox invert className="left-0">
+            <h1>Examples of View Transitions</h1>
+            <p>Slide from right</p>
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds6} />}
+        viewTransitionName="star-wars-simple-from-left"
+    >
+        <ContentBox>
+            <h1>Examples of View Transitions</h1>
+            <p>Star Wars diagonal wipe from left</p>
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds7} />}
+        viewTransitionName="star-wars-simple-from-right"
+    >
+        <ContentBox invert>
+            <h1>Examples of View Transitions</h1>
+            <p>Star Wars diagonal wipe from right</p>
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds8} />}
+        viewTransitionName="star-wars-circle-in"
+    >
+        <ContentBox>
+            <h1>Examples of View Transitions</h1>
+            <p>Star Wars iris wipe</p>
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage
+                className="[view-transition-name:slide-from-right]"
+                src={Backgrounds.GrasTreeClouds4}
+            />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox
+            invert
+            className="left-0 [view-transition-name:slide-from-left]"
+        >
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[0, 1]}
+            />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[3, 4, 5, 17]}
+            />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[6, 7]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[9, 10, 11, 16]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[13, 14, 15]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition className="[view-transition-name:fade-in-code]" />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0 [view-transition-name:slide-from-right-react-example]">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[0, 3, 4, 5, 6, 7]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[8, 14]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[9, 10]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[12, 13]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition
+                className="[view-transition-name:fade-in-code]"
+                highlightedLines={[17, 18, 19, 20, 21]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition className="[view-transition-name:fade-in-code]" />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.SnowyMountain2} />}
+        viewTransitionName="slide-from-right"
+    >
         <h1>UX Considerations</h1>
         <ul>
             <li>keep it simple</li>
@@ -115,7 +451,10 @@ const SLIDES = [
         </ul>
     </Slide>,
 
-    <Slide lightMode>
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.SnowyMountain3} />}
+    >
         <h1>The end</h1>
         <ul>
             <li>
@@ -127,7 +466,7 @@ const SLIDES = [
 
 function App() {
     return (
-        <main className="relative mx-auto h-[67.5rem] w-[120rem]">
+        <main className="relative mx-auto h-[1080px] w-[1920px]">
             <SlidesRouter slides={SLIDES} />
             <svg>
                 <defs>
