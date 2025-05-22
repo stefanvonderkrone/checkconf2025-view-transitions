@@ -11,24 +11,6 @@ import iosWebappViewTransitions from './assets/videos/ios_webapp_view_transition
 import { StartViewTransition } from './examples/StartViewTransition';
 import { UseViewTransition } from './examples/UseViewTransition';
 
-const SCREEN_01 = [
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '111111111111111111111111111',
-    '232323232323232323232323232',
-].join('\n');
-
 const BackgroundImage: FC<{ src: string; className?: string }> = ({
     src,
     className,
@@ -440,15 +422,44 @@ const SLIDES = [
 
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.SnowyMountain2} />}
-        viewTransitionName="slide-from-right"
+        background={
+            <BackgroundImage
+                src={Backgrounds.SnowyMountain2}
+                className="[view-transition-name:slide-from-right]"
+            />
+        }
+        viewTransitionName="none"
     >
-        <h1>UX Considerations</h1>
-        <ul>
-            <li>keep it simple</li>
-            <li>respect prefers-reduced-motion</li>
-            <li>Progressive enhancement</li>
-        </ul>
+        <ContentBox
+            invert
+            className="left-0 [view-transition-name:slide-from-left]"
+        >
+            <h1>UX Considerations</h1>
+            <p>keep it simple</p>
+            <p>respect prefers-reduced-motion</p>
+            <p>Progressive enhancement</p>
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.SnowyMountain2} />}
+        viewTransitionName="none"
+    >
+        <ContentBox invert className="left-0">
+            <h1>UX Considerations</h1>
+            <p>keep it simple</p>
+            <p>respect prefers-reduced-motion</p>
+            <p>Progressive enhancement</p>
+        </ContentBox>
+        <ContentBox className="left-2/3 w-1/3 [view-transition-name:slide-from-right-2]">
+            <h1>WebApp</h1>
+            <video
+                className="w-1/2 rounded-4xl border-0 drop-shadow-lg"
+                autoPlay
+            >
+                <source src={iosWebappViewTransitions} />
+            </video>
+        </ContentBox>
     </Slide>,
 
     <Slide

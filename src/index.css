@@ -113,7 +113,8 @@ h3 {
     }
 }
 
-::view-transition-new(slide-from-right) {
+::view-transition-new(slide-from-right),
+::view-transition-new(slide-from-right-2) {
     animation: slide-from-right 1.2s ease-in-out forwards;
 }
 
@@ -175,6 +176,16 @@ h3 {
 
 ::view-transition-new(star-wars-circle-out) {
     animation: star-wars-circle-out 1.2s ease-in-out forwards;
+}
+
+::view-transition-group(check-conf-logo) {
+    animation-name: none;
+}
+
+::view-transition-new(check-conf-logo) {
+    z-index: 10;
+    mix-blend-mode: normal;
+    animation: none;
 }
 
 @layer code {

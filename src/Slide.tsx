@@ -64,7 +64,7 @@ const Slide: FC<{
                 <picture className="absolute right-[16px] bottom-[16px] z-20">
                     <img
                         alt="CHECK.conf logo"
-                        className="w-[256px]"
+                        className="w-[256px] [view-transition-name:check-conf-logo]"
                         src={lightMode ? CheckConf2 : CheckConf}
                     />
                 </picture>
@@ -80,7 +80,7 @@ const Slide: FC<{
                 <span
                     className="absolute top-0 left-0 h-[8px] bg-amber-300 [view-transition-name:slides-progress]"
                     style={{
-                        width: `calc(${currentSlide} / ${numSlides} * 100%)`,
+                        width: `calc(${currentSlide} / ${numSlides - 1} * 100%)`,
                     }}
                 />
             </div>
