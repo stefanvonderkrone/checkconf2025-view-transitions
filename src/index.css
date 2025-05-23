@@ -1,9 +1,51 @@
 @import 'tailwindcss';
 
 @font-face {
-    font-family: PixelFont;
+    font-family: Pixellari;
     font-style: normal;
     src: url('/fonts/Pixellari.ttf');
+}
+
+@font-face {
+    font-family: CutePixel;
+    font-style: normal;
+    src: url('/fonts/CutePixel.ttf');
+}
+
+@font-face {
+    font-family: PressStart2P;
+    font-style: normal;
+    src: url('/fonts/PressStart2P.ttf');
+}
+
+@font-face {
+    font-family: upheavtt;
+    font-style: normal;
+    src: url('/fonts/upheavtt.ttf');
+}
+
+@font-face {
+    font-family: PixelOperatorBold;
+    font-style: normal;
+    src: url('/fonts/PixelOperator-Bold.ttf');
+}
+
+@font-face {
+    font-family: PixelOperatorMono;
+    font-style: normal;
+    src: url('/fonts/PixelOperatorMono.ttf');
+}
+
+@font-face {
+    font-family: RetroGaming;
+    font-style: normal;
+    src: url('/fonts/Retro Gaming.ttf');
+}
+
+@font-face {
+    font-family: W95fa;
+    font-style: normal;
+    src: url('/fonts/w95fa.woff2');
 }
 
 @font-face {
@@ -12,12 +54,18 @@
     src: url('/fonts/PixelCode.ttf');
 }
 
+@font-face {
+    font-family: PixelOperatorMonoBold;
+    font-style: normal;
+    src: url('/fonts/PixelOperatorMono8-Bold.ttf');
+}
+
 @utility pixelated {
     image-rendering: pixelated;
 }
 
 @theme {
-    --default-font-family: 'PixelFont';
+    --default-font-family: 'W95fa';
     --default-mono-font-family: 'PixelCode';
 }
 
