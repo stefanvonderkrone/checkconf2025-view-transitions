@@ -56,6 +56,7 @@ const SLIDES = [
             </picture>
         }
     >
+        <link rel="prefetch" href={Backgrounds.GrasTreeClouds1} />
         <picture>
             <img alt="level up" src={LevelUp} className="w-[580px]" />
         </picture>
@@ -71,6 +72,7 @@ const SLIDES = [
     </Slide>,
 
     <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds1} />}>
+        <link rel="prefetch" href={Backgrounds.BeatEmUp3} />
         <ContentBox className="left-1/3 w-1/3">
             <h1>App vs. Web</h1>
             <p>smooth UI transitions</p>
@@ -122,6 +124,7 @@ const SLIDES = [
         lightMode
         background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}
     >
+        <link rel="prefetch" href={Backgrounds.GrasTreeClouds2} />
         <ContentBox className="left-0 w-1/3 opacity-50">
             <h1>App</h1>
             <video
@@ -144,6 +147,7 @@ const SLIDES = [
     </Slide>,
 
     <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds2} />}>
+        <link rel="prefetch" href={Backgrounds.GrasTreeClouds3} />
         <ContentBox className="left-0 w-1/3">
             <h1>View Transitions</h1>
             <p>Reduced cognitive load</p>
@@ -153,6 +157,7 @@ const SLIDES = [
     </Slide>,
 
     <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds3} />}>
+        <link rel="prefetch" href={Backgrounds.GrasTreeClouds4} />
         <ContentBox invert>
             <h1>Examples of View Transitions</h1>
             <p>Simple fade-in</p>
@@ -164,6 +169,7 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
         viewTransitionName="slide-from-left"
     >
+        <link rel="prefetch" href={Backgrounds.GrasTreeClouds5} />
         <ContentBox className="right-0">
             <h1>Examples of View Transitions</h1>
             <p>Slide from left</p>
@@ -174,6 +180,7 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds5} />}
         viewTransitionName="slide-from-right"
     >
+        <link rel="prefetch" href={Backgrounds.GrasTreeClouds6} />
         <ContentBox invert className="left-0">
             <h1>Examples of View Transitions</h1>
             <p>Slide from right</p>
@@ -184,6 +191,7 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds6} />}
         viewTransitionName="star-wars-simple-from-left"
     >
+        <link rel="prefetch" href={Backgrounds.GrasTreeClouds7} />
         <ContentBox>
             <h1>Examples of View Transitions</h1>
             <p>Star Wars diagonal wipe from left</p>
@@ -194,6 +202,7 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds7} />}
         viewTransitionName="star-wars-simple-from-right"
     >
+        <link rel="prefetch" href={Backgrounds.GrasTreeClouds8} />
         <ContentBox invert>
             <h1>Examples of View Transitions</h1>
             <p>Star Wars diagonal wipe from right</p>
@@ -204,6 +213,7 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds8} />}
         viewTransitionName="star-wars-circle-in"
     >
+        <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain2} />
         <ContentBox>
             <h1>Examples of View Transitions</h1>
             <p>Star Wars iris wipe</p>
@@ -214,7 +224,7 @@ const SLIDES = [
         background={
             <BackgroundImage
                 className="[view-transition-name:slide-from-right]"
-                src={Backgrounds.GrasTreeClouds4}
+                src={Backgrounds.GrasTreeCloudsMoutain2}
             />
         }
         viewTransitionName="do-nothing"
@@ -229,7 +239,9 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -242,7 +254,9 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -255,7 +269,9 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -267,7 +283,9 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
     <Slide
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -279,7 +297,9 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
     <Slide
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -291,7 +311,9 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
     <Slide
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -302,7 +324,9 @@ const SLIDES = [
 
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -317,7 +341,9 @@ const SLIDES = [
 
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -334,7 +360,9 @@ const SLIDES = [
     </Slide>,
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -351,7 +379,9 @@ const SLIDES = [
     </Slide>,
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -368,7 +398,9 @@ const SLIDES = [
     </Slide>,
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -385,7 +417,9 @@ const SLIDES = [
     </Slide>,
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
@@ -402,9 +436,12 @@ const SLIDES = [
     </Slide>,
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
         viewTransitionName="do-nothing"
     >
+        <link rel="prefetch" href={Backgrounds.SnowyMountain2} />
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition />
@@ -438,6 +475,7 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.SnowyMountain2} />}
         viewTransitionName="do-nothing"
     >
+        <link rel="prefetch" href={Backgrounds.SnowyMountain1} />
         <ContentBox invert className="left-0 w-1/3">
             <h1>UX Considerations</h1>
             <p>keep it simple</p>
