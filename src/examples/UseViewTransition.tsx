@@ -9,7 +9,7 @@ export const UseViewTransition: FC<{
     return (
         <div
             className={cn(
-                'rounded-3xl bg-[#1E1E2E] p-8 text-[#CDD6F4]',
+                'mb-12 rounded-3xl bg-[#1E1E2E] p-8 text-[#CDD6F4]',
                 className,
             )}
         >

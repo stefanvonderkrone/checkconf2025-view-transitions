@@ -63,22 +63,22 @@ const Slide: FC<{
                     {children}
                 </div>
 
-                <picture className="absolute right-[16px] bottom-[16px] z-20">
+                <picture
+                    className={cn('absolute right-[16px] bottom-[16px] z-20', {
+                        '[view-transition-name:check-conf-logo-dark]':
+                            lightMode,
+                        '[view-transition-name:check-conf-logo-light]':
+                            !lightMode,
+                    })}
+                >
                     <img
                         alt="CHECK.conf logo"
-                        className="w-[256px] [view-transition-name:check-conf-logo]"
+                        className="w-[256px]"
                         src={lightMode ? CheckConf2 : CheckConf}
                     />
                 </picture>
             </div>
-            <div
-                className={cn(
-                    'relative h-[8px] w-full bg-sky-200 [view-transition-name:slides-track]',
-                    {
-                        'text-white': !lightMode,
-                    },
-                )}
-            >
+            <div className="relative h-[8px] w-full bg-sky-200 drop-shadow-2xl [view-transition-name:slides-track]">
                 <span
                     className="absolute top-0 left-0 h-[8px] bg-amber-300 [view-transition-name:slides-progress]"
                     style={{

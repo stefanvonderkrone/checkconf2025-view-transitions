@@ -249,14 +249,36 @@ p {
     animation: star-wars-circle-out 1.2s ease-in-out forwards;
 }
 
-::view-transition-group(check-conf-logo) {
-    animation-name: none;
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
 }
 
-::view-transition-new(check-conf-logo) {
-    z-index: 10;
+::view-transition-new(check-conf-logo-dark),
+::view-transition-new(check-conf-logo-light) {
     mix-blend-mode: normal;
+}
+
+::view-transition-new(check-conf-logo-dark),
+::view-transition-new(check-conf-logo-light),
+::view-transition-old(check-conf-logo-dark),
+::view-transition-old(check-conf-logo-light) {
     animation: none;
+}
+
+::view-transition-new(check-conf-logo-dark):only-child,
+::view-transition-new(check-conf-logo-light):only-child {
+    animation: fade-in 500ms ease-in-out forwards;
+}
+
+::view-transition-old(check-conf-logo-dark):only-child,
+::view-transition-old(check-conf-logo-light):only-child {
+    animation: fade-out 500ms ease-in-out forwards;
+}
+
+::view-transition-group(check-conf-logo) {
+    z-index: 10;
 }
 
 @layer code {

@@ -70,10 +70,7 @@ const SLIDES = [
         </h3>
     </Slide>,
 
-    <Slide
-        lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds1} />}
-    >
+    <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds1} />}>
         <ContentBox className="left-1/3 w-1/3">
             <h1>App vs. Web</h1>
             <p>smooth UI transitions</p>
@@ -81,7 +78,10 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
 
-    <Slide background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}>
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}
+    >
         <ContentBox className="left-0 w-1/3">
             <h1>App</h1>
             <video className="w-1/2 rounded-4xl border-0 drop-shadow-lg">
@@ -96,7 +96,10 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
 
-    <Slide background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}>
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}
+    >
         <ContentBox className="left-0 w-1/3">
             <h1>App</h1>
             <video
@@ -115,7 +118,10 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
 
-    <Slide background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}>
+    <Slide
+        lightMode
+        background={<BackgroundImage src={Backgrounds.BeatEmUp3} />}
+    >
         <ContentBox className="left-0 w-1/3 opacity-50">
             <h1>App</h1>
             <video
@@ -137,10 +143,7 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
 
-    <Slide
-        lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds2} />}
-    >
+    <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds2} />}>
         <ContentBox className="left-0 w-1/3">
             <h1>View Transitions</h1>
             <p>Reduced cognitive load</p>
@@ -149,10 +152,7 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
 
-    <Slide
-        lightMode
-        background={<BackgroundImage src={Backgrounds.GrasTreeClouds3} />}
-    >
+    <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds3} />}>
         <ContentBox invert>
             <h1>Examples of View Transitions</h1>
             <p>Simple fade-in</p>
@@ -171,7 +171,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds5} />}
         viewTransitionName="slide-from-right"
     >
@@ -182,7 +181,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds6} />}
         viewTransitionName="star-wars-simple-from-left"
     >
@@ -193,7 +191,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds7} />}
         viewTransitionName="star-wars-simple-from-right"
     >
@@ -204,7 +201,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds8} />}
         viewTransitionName="star-wars-circle-in"
     >
@@ -215,7 +211,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={
             <BackgroundImage
                 className="[view-transition-name:slide-from-right]"
@@ -234,7 +229,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
         viewTransitionName="do-nothing"
     >
@@ -248,7 +242,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
         viewTransitionName="do-nothing"
     >
@@ -262,7 +255,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
         viewTransitionName="do-nothing"
     >
@@ -275,7 +267,6 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
         viewTransitionName="do-nothing"
     >
@@ -288,7 +279,6 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
         viewTransitionName="do-nothing"
     >
@@ -301,7 +291,6 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds4} />}
         viewTransitionName="do-nothing"
     >
@@ -427,7 +416,6 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={
             <BackgroundImage
                 src={Backgrounds.SnowyMountain2}
@@ -447,7 +435,6 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.SnowyMountain2} />}
         viewTransitionName="do-nothing"
     >
@@ -469,13 +456,14 @@ const SLIDES = [
     </Slide>,
 
     <Slide
-        lightMode
         background={<BackgroundImage src={Backgrounds.SnowyMountain1} />}
         viewTransitionName="slide-from-top"
     >
         <ContentBox className="left-0 w-1/2">
             <h1>The end</h1>
-            <p>Link to this repo and a README with additional material/links</p>
+            <p className="text-center">
+                Link to the repo and a README with additional material/links
+            </p>
             <img src={qrCode} width={480} height={480} />
         </ContentBox>
     </Slide>,
