@@ -10,6 +10,7 @@ import iosWebapp from './assets/videos/ios_webapp.mp4';
 import iosWebappViewTransitions from './assets/videos/ios_webapp_view_transitions.mp4';
 import { StartViewTransition } from './examples/StartViewTransition';
 import { UseViewTransition } from './examples/UseViewTransition';
+import qrCode from './assets/qr_code.svg';
 
 const BackgroundImage: FC<{ src: string; className?: string }> = ({
     src,
@@ -443,7 +444,7 @@ const SLIDES = [
     <Slide
         lightMode
         background={<BackgroundImage src={Backgrounds.SnowyMountain2} />}
-        viewTransitionName="none"
+        viewTransitionName="do-nothing"
     >
         <ContentBox invert className="left-0">
             <h1>UX Considerations</h1>
@@ -465,13 +466,13 @@ const SLIDES = [
     <Slide
         lightMode
         background={<BackgroundImage src={Backgrounds.SnowyMountain1} />}
+        viewTransitionName="slide-from-top"
     >
-        <h1>The end</h1>
-        <ul>
-            <li>
-                Link to this repo and a README with additional material/links
-            </li>
-        </ul>
+        <ContentBox className="left-0 w-1/2">
+            <h1>The end</h1>
+            <p>Link to this repo and a README with additional material/links</p>
+            <img src={qrCode} width={480} height={480} />
+        </ContentBox>
     </Slide>,
 ];
 

@@ -10,6 +10,7 @@ type ViewTransitionName =
     | 'fade-in'
     | 'slide-from-left'
     | 'slide-from-right'
+    | 'slide-from-top'
     | 'star-wars-simple-from-left'
     | 'star-wars-simple-from-right'
     | 'star-wars-circle-in'
@@ -24,6 +25,7 @@ const viewTransitionClassMap: ViewTransitionClassMap = {
     'do-nothing': '[view-transition-name:do-nothing]',
     'slide-from-left': '[view-transition-name:slide-from-left]',
     'slide-from-right': '[view-transition-name:slide-from-right]',
+    'slide-from-top': '[view-transition-name:slide-from-top]',
     'star-wars-circle-in': '[view-transition-name:star-wars-circle-in]',
     'star-wars-circle-out': '[view-transition-name:star-wars-circle-out]',
     'star-wars-simple-from-left':
