@@ -13,7 +13,7 @@ export const StartViewTransition: FC<{
                 className,
             )}
         >
-            <pre className="flex flex-col">
+            <pre className="flex flex-col text-base">
                 <Highlighter lines={highlightedLines}>
                     <code>
                         <span className="Comment">

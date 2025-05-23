@@ -30,7 +30,7 @@ const ContentBox: FC<{
 }> = ({ className, children, invert = false }) => (
     <div
         className={cn(
-            'drop-shadow-2xl[&_p]:text-amber-900 absolute flex h-full flex-col items-center justify-center gap-[24px] bg-sky-100 px-16 text-amber-950',
+            'absolute flex h-full flex-col items-center justify-center gap-[24px] bg-sky-100 px-16 text-amber-950 drop-shadow-2xl [&_p]:text-amber-900',
             className,
             {
                 '[&_h1]:text-amber-500': invert,
@@ -464,7 +464,7 @@ const SLIDES = [
 
     <Slide
         lightMode
-        background={<BackgroundImage src={Backgrounds.SnowyMountain3} />}
+        background={<BackgroundImage src={Backgrounds.SnowyMountain1} />}
     >
         <h1>The end</h1>
         <ul>
