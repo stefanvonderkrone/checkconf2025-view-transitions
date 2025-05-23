@@ -59,7 +59,7 @@ const Slide: FC<{
                     {background}
                 </div>
 
-                <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-[36px] text-2xl tracking-widest">
+                <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-[36px] text-2xl tracking-wide">
                     {children}
                 </div>
 

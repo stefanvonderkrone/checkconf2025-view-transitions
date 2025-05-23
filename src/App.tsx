@@ -66,7 +66,7 @@ const SLIDES = [
         <h3 className="text-center text-amber-400 text-shadow-lg">
             Leveling Up with View Transitions
             <br />
-            Stefan von der Krone | 28/06/24 | 14:00 Uhr
+            Stefan von der Krone | 28/06/24 | 11:15 Uhr
         </h3>
     </Slide>,
 
@@ -438,7 +438,7 @@ const SLIDES = [
     >
         <ContentBox
             invert
-            className="left-0 [view-transition-name:slide-from-left]"
+            className="left-0 w-1/3 [view-transition-name:slide-from-left]"
         >
             <h1>UX Considerations</h1>
             <p>keep it simple</p>
@@ -451,16 +451,16 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.SnowyMountain2} />}
         viewTransitionName="do-nothing"
     >
-        <ContentBox invert className="left-0">
+        <ContentBox invert className="left-0 w-1/3">
             <h1>UX Considerations</h1>
             <p>keep it simple</p>
             <p>respect prefers-reduced-motion</p>
             <p>Progressive enhancement</p>
         </ContentBox>
-        <ContentBox className="left-2/3 w-1/3 [view-transition-name:slide-from-right-2]">
+        <ContentBox className="left-1/3 w-1/3 [view-transition-name:slide-from-right-2]">
             <h1>WebApp</h1>
             <video
-                className="w-1/2 rounded-4xl border-0 drop-shadow-lg"
+                className="w-3/4 rounded-4xl border-0 drop-shadow-lg"
                 autoPlay
             >
                 <source src={iosWebappViewTransitions} />

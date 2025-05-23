@@ -94,7 +94,7 @@ h3 {
 }
 
 p {
-    @apply text-[24px];
+    @apply text-[32px];
 }
 
 ::view-transition-group(root),
@@ -165,13 +165,22 @@ p {
     }
 }
 
-::view-transition-new(slide-from-right),
-::view-transition-new(slide-from-right-2) {
+::view-transition-new(slide-from-right) {
     animation: slide-from-right 1.2s ease-in-out forwards;
 }
 
 ::view-transition-new(slide-from-right-react-example) {
     animation: slide-from-right 500ms ease-in-out forwards;
+}
+
+@keyframes slide-from-right-2 {
+    from {
+        transform: translateX(200%);
+    }
+}
+
+::view-transition-new(slide-from-right-2) {
+    animation: slide-from-right-2 1.2s ease-in-out forwards;
 }
 
 @keyframes slide-from-top {
@@ -316,4 +325,3 @@ p {
         color: #cba6f7;
     }
 }
-
