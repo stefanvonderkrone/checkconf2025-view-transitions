@@ -81,8 +81,8 @@ const SlidesRouter: FC<{ slides: ReactElement[] }> = ({ slides }) => {
     useEffect(
         function handleKeyboardEvents() {
             const abortController = new AbortController();
-            const onKeyPress = (e: KeyboardEvent) => {
-                switch (e.key) {
+            const onKeyPress = (key: string) => {
+                switch (key) {
                     case 'ArrowLeft':
                     case 'Backspace':
                         if (slideIndex > 0) {
@@ -105,7 +105,10 @@ const SlidesRouter: FC<{ slides: ReactElement[] }> = ({ slides }) => {
                         break;
                 }
             };
-            document.addEventListener('keydown', onKeyPress, {
+            document.addEventListener('keydown', e => onKeyPress(e.key), {
+                signal: abortController.signal,
+            });
+            document.addEventListener('click', () => onKeyPress('Enter'), {
                 signal: abortController.signal,
             });
             return () => {
