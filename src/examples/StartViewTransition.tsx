@@ -41,11 +41,10 @@ export const StartViewTransition: FC<{
                         <span className="NonText"> </span>
                     </code>
                     <code>
-                        <span className="Keyword">const</span>{' '}
+                        <span className="Keyword">function</span>{' '}
                         <span className="-variable">
                             <span className="Function">runTransition</span>
-                        </span>{' '}
-                        <span className="Operator">=</span>{' '}
+                        </span>
                         <span className="-punctuation-bracket">(</span>
                     </code>
                     <code>
@@ -72,7 +71,6 @@ export const StartViewTransition: FC<{
                     </code>
                     <code>
                         <span className="-punctuation-bracket">)</span>{' '}
-                        <span className="Operator">=&gt;</span>{' '}
                         <span className="-punctuation-bracket">{'{'}</span>
                     </code>
                     <code>
