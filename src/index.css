@@ -277,7 +277,8 @@ p {
     animation: fade-out 500ms ease-in-out forwards;
 }
 
-::view-transition-group(check-conf-logo) {
+::view-transition-group(check-conf-logo-dark),
+::view-transition-group(check-conf-logo-light) {
     z-index: 10;
 }
 
