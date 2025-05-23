@@ -72,7 +72,9 @@ const SLIDES = [
     </Slide>,
 
     <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds1} />}>
-        <link rel="prefetch" href={Backgrounds.BeatEmUp3} />
+        <link rel="prefetch" href={Backgrounds.BeatEmUp3} />:
+        <link rel="prefetch" href={iosNative} />
+        <link rel="prefetch" href={iosWebapp} />
         <ContentBox className="left-1/3 w-1/3">
             <h1>App vs. Web</h1>
             <p>smooth UI transitions</p>
@@ -86,13 +88,13 @@ const SLIDES = [
     >
         <ContentBox className="left-0 w-1/3">
             <h1>App</h1>
-            <video className="w-1/2 rounded-4xl border-0 drop-shadow-lg">
+            <video className="w-3/4 rounded-4xl border-0 drop-shadow-lg">
                 <source src={iosNative} />
             </video>
         </ContentBox>
         <ContentBox className="left-2/3 w-1/3">
             <h1>Web</h1>
-            <video className="w-1/2 rounded-4xl border-0 drop-shadow-lg">
+            <video className="w-3/4 rounded-4xl border-0 drop-shadow-lg">
                 <source src={iosWebapp} />
             </video>
         </ContentBox>
@@ -107,14 +109,14 @@ const SLIDES = [
             <video
                 key="play"
                 autoPlay
-                className="w-1/2 rounded-4xl border-0 drop-shadow-lg"
+                className="w-3/4 rounded-4xl border-0 drop-shadow-lg"
             >
                 <source src={iosNative} />
             </video>
         </ContentBox>
         <ContentBox className="left-2/3 w-1/3 opacity-50">
             <h1>Web</h1>
-            <video className="w-1/2 rounded-4xl border-0 drop-shadow-lg">
+            <video className="w-3/4 rounded-4xl border-0 drop-shadow-lg">
                 <source src={iosWebapp} />
             </video>
         </ContentBox>
@@ -129,7 +131,7 @@ const SLIDES = [
             <h1>App</h1>
             <video
                 key="stop"
-                className="w-1/2 rounded-4xl border-0 drop-shadow-lg"
+                className="w-3/4 rounded-4xl border-0 drop-shadow-lg"
             >
                 <source src={iosNative} />
             </video>
@@ -139,7 +141,7 @@ const SLIDES = [
             <video
                 key="play"
                 autoPlay
-                className="w-1/2 rounded-4xl border-0 drop-shadow-lg"
+                className="w-3/4 rounded-4xl border-0 drop-shadow-lg"
             >
                 <source src={iosWebapp} />
             </video>
@@ -214,6 +216,7 @@ const SLIDES = [
         viewTransitionName="star-wars-circle-in"
     >
         <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain2} />
+        <link rel="prefetch" href="/fonts/PressStart2P.ttf" />
         <ContentBox>
             <h1>Examples of View Transitions</h1>
             <p>Star Wars iris wipe</p>
@@ -461,6 +464,7 @@ const SLIDES = [
         }
         viewTransitionName="none"
     >
+        <link rel="prefetch" href={iosWebappViewTransitions} />
         <ContentBox
             invert
             className="left-0 w-1/3 [view-transition-name:slide-from-left]"
