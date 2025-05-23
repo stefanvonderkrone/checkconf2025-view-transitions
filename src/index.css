@@ -65,7 +65,7 @@
 }
 
 @theme {
-    --default-font-family: 'CutePixel';
+    --default-font-family: 'Pixellari';
     --default-mono-font-family: 'PressStart2P';
 }
 
@@ -86,15 +86,15 @@ body {
 }
 
 h1 {
-    @apply text-[64px] font-bold;
+    @apply text-[48px] font-bold;
 }
 
 h3 {
-    @apply text-[48px];
+    @apply text-[32px];
 }
 
 p {
-    @apply text-[32px];
+    @apply text-[24px];
 }
 
 ::view-transition-group(root),

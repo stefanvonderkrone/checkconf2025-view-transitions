@@ -59,10 +59,15 @@ const SLIDES = [
         <picture>
             <img alt="level up" src={LevelUp} className="w-[580px]" />
         </picture>
-        <h1>Stop the Flash, Start the Flow</h1>
+        <h1 className="text-amber-400 text-shadow-lg">
+            Stop the Flash, Start the Flow
+        </h1>
         <hr className="w-[920px] border-[2px] border-white" />
-        <h3>Leveling Up with View Transitions</h3>
-        <h3>Stefan von der Krone | 28/06/24 | 14:00 Uhr</h3>
+        <h3 className="text-center text-amber-400 text-shadow-lg">
+            Leveling Up with View Transitions
+            <br />
+            Stefan von der Krone | 28/06/24 | 14:00 Uhr
+        </h3>
     </Slide>,
 
     <Slide
