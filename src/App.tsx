@@ -476,17 +476,16 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
     <Slide
-        background={<BackgroundImage src={Backgrounds.SnowyMountain2} />}
+        background={
+            <BackgroundImage
+                src={Backgrounds.SnowyMountain2}
+                className="[view-transition-name:do-nothing-2]"
+            />
+        }
         viewTransitionName="do-nothing"
     >
         <link rel="prefetch" href={Backgrounds.SnowyMountain1} />
-        <ContentBox invert className="left-0 w-1/3">
-            <h1>UX Considerations</h1>
-            <p>keep it simple</p>
-            <p>respect prefers-reduced-motion</p>
-            <p>Progressive enhancement</p>
-        </ContentBox>
-        <ContentBox className="left-1/3 w-1/3 [view-transition-name:slide-from-right-2]">
+        <ContentBox className="left-1/3 w-1/3 [view-transition-name:slide-from-left-2]">
             <h1>WebApp</h1>
             <video
                 className="w-3/4 rounded-4xl border-0 drop-shadow-lg"
@@ -494,6 +493,15 @@ const SLIDES = [
             >
                 <source src={iosWebappViewTransitions} />
             </video>
+        </ContentBox>
+        <ContentBox
+            invert
+            className="left-0 w-1/3 [view-transition-name:do-nothing-3]"
+        >
+            <h1>UX Considerations</h1>
+            <p>keep it simple</p>
+            <p>respect prefers-reduced-motion</p>
+            <p>Progressive enhancement</p>
         </ContentBox>
     </Slide>,
 

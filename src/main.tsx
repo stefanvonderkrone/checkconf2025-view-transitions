@@ -20,7 +20,13 @@ if (!root) {
 }
 
 window.addEventListener('resize', () => {
-    root.style.setProperty('zoom', (window.innerWidth / 1920).toString());
+    root.style.setProperty(
+        'zoom',
+        Math.min(
+            window.innerHeight / 1080,
+            window.innerWidth / 1920,
+        ).toString(),
+    );
 });
 window.dispatchEvent(new UIEvent('resize'));
 

@@ -129,12 +129,22 @@ p {
         height 500ms;
 }
 
-::view-transition-new(do-nothing) {
+::view-transition-new(do-nothing),
+::view-transition-new(do-nothing-2) {
     animation: none;
     opacity: 0;
 }
 
-::view-transition-old(do-nothing) {
+::view-transition-new(do-nothing-3) {
+    animation: none;
+}
+
+::view-transition-old(do-nothing),
+::view-transition-old(do-nothing-2) {
+    animation: none;
+}
+
+::view-transition-old(do-nothing-3) {
     animation: none;
 }
 
@@ -173,14 +183,14 @@ p {
     animation: slide-from-right 500ms ease-in-out forwards;
 }
 
-@keyframes slide-from-right-2 {
+@keyframes slide-from-left-2 {
     from {
-        transform: translateX(200%);
+        transform: translateX(-100%);
     }
 }
 
-::view-transition-new(slide-from-right-2) {
-    animation: slide-from-right-2 1.2s ease-in-out forwards;
+::view-transition-new(slide-from-left-2) {
+    animation: slide-from-left-2 1.2s ease-in-out forwards;
 }
 
 @keyframes slide-from-top {
