@@ -1,0 +1,13 @@
+@keyframes star-wars-circle-in {
+    0% {
+        clip-path: circle(0%);
+    }
+
+    100% {
+        clip-path: circle(100%);
+    }
+}
+
+::view-transition-new(star-wars-circle-in) {
+    animation: star-wars-circle-in 1.2s ease-in-out forwards;
+}

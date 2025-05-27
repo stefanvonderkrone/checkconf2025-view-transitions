@@ -1,0 +1,13 @@
+@keyframes star-wars-simple-from-left {
+    0% {
+        clip-path: polygon(-120% 0%, -20% 0%, 0% 100%, -100% 100%);
+    }
+
+    100% {
+        clip-path: polygon(0% 0%, 100% 0%, 120% 100%, 0% 100%);
+    }
+}
+
+::view-transition-new(star-wars-simple-from-left) {
+    animation: star-wars-simple-from-left 1.2s ease-in-out forwards;
+}

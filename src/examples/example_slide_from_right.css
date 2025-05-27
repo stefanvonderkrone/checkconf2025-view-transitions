@@ -1,0 +1,9 @@
+@keyframes slide-from-right {
+    from {
+        transform: translateX(100%);
+    }
+}
+
+::view-transition-new(slide-from-right) {
+    animation: slide-from-right 1.2s ease-in-out forwards;
+}

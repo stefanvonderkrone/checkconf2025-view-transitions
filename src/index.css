@@ -357,4 +357,30 @@ p {
     .-keyword-return {
         color: #cba6f7;
     }
+    .-tag {
+        color: #cba6f7;
+    }
+    .MatchParen {
+        background-color: #45475a;
+        color: #fab387;
+        font-weight: bold;
+    }
+    .-number-css {
+        color: #fab387;
+    }
+    .Constant {
+        color: #fab387;
+    }
+    .-string-plain-css {
+        color: #fab387;
+    }
+    .PreProc {
+        color: #f5c2e7;
+    }
+    .-type-tag-css {
+        color: #cba6f7;
+    }
+    .-property-css {
+        color: #b4befe;
+    }
 }

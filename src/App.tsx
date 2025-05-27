@@ -11,6 +11,7 @@ import iosWebappViewTransitions from './assets/videos/ios_webapp_view_transition
 import { StartViewTransition } from './examples/StartViewTransition';
 import { UseViewTransition } from './examples/UseViewTransition';
 import qrCode from './assets/qr_code.svg';
+import { CssExamples } from './examples/CssExamples';
 
 const BackgroundImage: FC<{ src: string; className?: string }> = ({
     src,
@@ -444,7 +445,7 @@ const SLIDES = [
         }
         viewTransitionName="do-nothing"
     >
-        <link rel="prefetch" href={Backgrounds.SnowyMountain2} />
+        <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain3} />
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition />
@@ -452,6 +453,80 @@ const SLIDES = [
         <ContentBox className="right-0">
             <h1>React Example</h1>
             <UseViewTransition className="[view-transition-name:fade-in-code]" />
+        </ContentBox>
+    </Slide>,
+
+    // TODO: add slides to explain view transition css
+
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain3} />
+        }
+        viewTransitionName="fade-in"
+    >
+        <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain4} />
+        <ContentBox invert>
+            <h1>Fade In</h1>
+            <CssExamples.FadeIn />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain4} />
+        }
+        viewTransitionName="slide-from-left"
+    >
+        <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain5} />
+        <ContentBox>
+            <h1>Slide from left</h1>
+            <CssExamples.SlideFromLeft />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain5} />
+        }
+        viewTransitionName="slide-from-right"
+    >
+        <link rel="prefetch" href={Backgrounds.Scifi1} />
+        <ContentBox invert>
+            <h1>Slide from right</h1>
+            <CssExamples.SlideFromRight />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        background={<BackgroundImage src={Backgrounds.Scifi1} />}
+        viewTransitionName="star-wars-simple-from-left"
+    >
+        <link rel="prefetch" href={Backgrounds.Scifi2} />
+        <ContentBox className="left-0">
+            <h1>Star Wars diagonal wipe from left</h1>
+            <CssExamples.StarWarsSimpleFromLeft />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        background={<BackgroundImage src={Backgrounds.Scifi2} />}
+        viewTransitionName="star-wars-simple-from-right"
+    >
+        <link rel="prefetch" href={Backgrounds.Scifi3} />
+        <ContentBox invert className="right-0">
+            <h1>Star Wars diagonal wipe from right</h1>
+            <CssExamples.StarWarsSimpleFromRight />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        background={<BackgroundImage src={Backgrounds.Scifi3} />}
+        viewTransitionName="star-wars-circle-in"
+    >
+        <link rel="prefetch" href={Backgrounds.SnowyMountain2} />
+        <ContentBox>
+            <h1>Star Wars iris wipe</h1>
+            <CssExamples.StarWarsCircleIn />
         </ContentBox>
     </Slide>,
 
