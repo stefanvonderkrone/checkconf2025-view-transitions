@@ -471,7 +471,7 @@ const SLIDES = [
             <h1>React Example</h1>
             <UseViewTransition />
         </ContentBox>
-        <ContentBox className="[view-transition-name:fade-in-code]">
+        <ContentBox className="[view-transition-name:slide-from-top]">
             <h1>How to style View Transitions</h1>
             <ViewTransition />
         </ContentBox>
