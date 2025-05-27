@@ -1,0 +1,28 @@
+/* an overlay over the entire page */
+::view-transition {
+}
+
+/* e.g for setting z-index */
+::view-transition-group(root) {
+}
+
+/* contains the snapshots */
+::view-transition-image-pair(root) {
+}
+
+/* a screenshot of the old view */
+::view-transition-old(root) {
+}
+
+/* a live representation of the new view */
+::view-transition-new(root) {
+}
+
+/* change animation if the other snapshot is missing */
+::view-transition-new(root):only-child {
+}
+
+.page {
+    /* must be unique */
+    view-transition-name: page;
+}

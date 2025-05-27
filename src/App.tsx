@@ -12,6 +12,7 @@ import { StartViewTransition } from './examples/StartViewTransition';
 import { UseViewTransition } from './examples/UseViewTransition';
 import qrCode from './assets/qr_code.svg';
 import { CssExamples } from './examples/CssExamples';
+import { ViewTransition } from './examples/ViewTransition';
 
 const BackgroundImage: FC<{ src: string; className?: string }> = ({
     src,
@@ -445,7 +446,6 @@ const SLIDES = [
         }
         viewTransitionName="do-nothing"
     >
-        <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain3} />
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition />
@@ -456,7 +456,188 @@ const SLIDES = [
         </ContentBox>
     </Slide>,
 
-    // TODO: add slides to explain view transition css
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition highlightedLines={[0, 1]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition highlightedLines={[3, 4]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition highlightedLines={[6, 7]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition highlightedLines={[9, 10]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition highlightedLines={[12, 13]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition highlightedLines={[15, 16]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition highlightedLines={[18, 19, 20, 21]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        lightMode
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain3} />
+        <ContentBox invert className="left-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransition />
+        </ContentBox>
+        <ContentBox className="right-0">
+            <h1>React Example</h1>
+            <UseViewTransition />
+        </ContentBox>
+        <ContentBox className="[view-transition-name:fade-in-code]">
+            <h1>How to style View Transitions</h1>
+            <ViewTransition />
+        </ContentBox>
+    </Slide>,
 
     <Slide
         background={
