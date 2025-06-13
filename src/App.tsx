@@ -13,6 +13,7 @@ import { UseViewTransition } from './examples/UseViewTransition';
 import qrCode from './assets/qr_code.svg';
 import { CssExamples } from './examples/CssExamples';
 import { ViewTransition } from './examples/ViewTransition';
+import { StartViewTransitionTypes } from './examples/StartViewTransitionTypes';
 
 const BackgroundImage: FC<{ src: string; className?: string }> = ({
     src,
@@ -228,12 +229,109 @@ const SLIDES = [
     <Slide
         background={
             <BackgroundImage
-                className="[view-transition-name:slide-from-right]"
+                className="[view-transition-name:slide-from-left]"
                 src={Backgrounds.GrasTreeCloudsMoutain2}
             />
         }
         viewTransitionName="do-nothing"
     >
+        <ContentBox className="right-0 [view-transition-name:slide-from-right]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox className="right-0 [view-transition-name:fade-in-code]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes highlightedLines={[0, 1, 2, 3, 4, 5]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox className="right-0 [view-transition-name:fade-in-code]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes
+                highlightedLines={[
+                    7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+                ]}
+            />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox className="right-0 [view-transition-name:fade-in-code]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes highlightedLines={[8, 9]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox className="right-0 [view-transition-name:fade-in-code]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes highlightedLines={[11, 12]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox className="right-0 [view-transition-name:fade-in-code]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes highlightedLines={[14, 15]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox className="right-0 [view-transition-name:fade-in-code]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes highlightedLines={[17, 18]} />
+        </ContentBox>
+    </Slide>,
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox className="right-0 [view-transition-name:fade-in-code]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
+    </Slide>,
+
+    <Slide
+        background={
+            <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
+        }
+        viewTransitionName="do-nothing"
+    >
+        <ContentBox className="right-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
         <ContentBox
             invert
             className="left-0 [view-transition-name:slide-from-left]"
@@ -249,6 +347,10 @@ const SLIDES = [
         }
         viewTransitionName="do-nothing"
     >
+        <ContentBox className="right-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition
@@ -264,6 +366,10 @@ const SLIDES = [
         }
         viewTransitionName="do-nothing"
     >
+        <ContentBox className="right-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition
@@ -279,6 +385,10 @@ const SLIDES = [
         }
         viewTransitionName="do-nothing"
     >
+        <ContentBox className="right-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition
@@ -293,6 +403,10 @@ const SLIDES = [
         }
         viewTransitionName="do-nothing"
     >
+        <ContentBox className="right-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition
@@ -307,6 +421,10 @@ const SLIDES = [
         }
         viewTransitionName="do-nothing"
     >
+        <ContentBox className="right-0">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition
@@ -321,6 +439,10 @@ const SLIDES = [
         }
         viewTransitionName="do-nothing"
     >
+        <ContentBox className="right-0 [view-transition-name:slide-out-to-right]">
+            <h1>How do View Transitions work?</h1>
+            <StartViewTransitionTypes />
+        </ContentBox>
         <ContentBox invert className="left-0">
             <h1>How do View Transitions work?</h1>
             <StartViewTransition className="[view-transition-name:fade-in-code]" />

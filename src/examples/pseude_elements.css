@@ -22,7 +22,7 @@
 ::view-transition-new(root):only-child {
 }
 
-.page {
+[your-very-own-selector] {
     /* must be unique */
-    view-transition-name: page;
+    view-transition-name: your-very-own-transition-name;
 }

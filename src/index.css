@@ -207,6 +207,16 @@ p {
     animation: slide-from-right 500ms ease-in-out forwards;
 }
 
+@keyframes slide-out-to-right {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+::view-transition-old(slide-out-to-right):only-child {
+    animation: slide-out-to-right 1.2s ease-in-out forwards;
+}
+
 @keyframes slide-from-left-2 {
     from {
         transform: translateX(-100%);
@@ -406,5 +416,9 @@ p {
     }
     .-property-css {
         color: #b4befe;
+    }
+    .-tag-attribute {
+        font-style: italic;
+        color: #94e2d5;
     }
 }
