@@ -1,3 +1,4 @@
+// @ts-expect-error
 interface Document {
     // starts the view transition
     startViewTransition: (
