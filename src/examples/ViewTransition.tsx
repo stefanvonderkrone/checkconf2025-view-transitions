@@ -176,10 +176,11 @@ export const ViewTransition: FC<{
                     <span className="NonText"> </span>
                 </code>
                 <code>
-                    <span className="Delimiter">.</span>
-                    <span className="-type-css">
-                        <span className="-property-class-css">page</span>
-                    </span>{' '}
+                    <span className="-punctuation-bracket">[</span>
+                    <span className="-tag-attribute">
+                        your-very-own-selector
+                    </span>
+                    <span className="-punctuation-bracket">]</span>{' '}
                     <span className="-punctuation-bracket">{'{'}</span>
                 </code>
                 <code>
@@ -192,7 +193,9 @@ export const ViewTransition: FC<{
                     <span className="NonText">{'    '}</span>
                     <span className="-property-css">view-transition-name</span>
                     <span className="Delimiter">:</span>{' '}
-                    <span className="-string-plain-css">page</span>
+                    <span className="-string-plain-css">
+                        your-very-own-transition-name
+                    </span>
                     <span className="Delimiter">;</span>
                 </code>
                 <code>

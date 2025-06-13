@@ -60,13 +60,37 @@
     src: url('/fonts/PixelOperatorMono8-Bold.ttf');
 }
 
+@font-face {
+    font-family: BigBlueTerm437NerdFontMono;
+    font-style: normal;
+    src: url('/fonts/BigBlueTerm437NerdFontMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: DepartureMonoNerdFontMono;
+    font-style: normal;
+    src: url('/fonts/DepartureMonoNerdFontMono-Regular.otf');
+}
+
+@font-face {
+    font-family: GohuFont11NerdFontMono;
+    font-style: normal;
+    src: url('/fonts/GohuFont11NerdFontMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: ProggyCleanSZNerdFontMono;
+    font-style: normal;
+    src: url('/fonts/ProggyCleanSZNerdFontMono-Regular.ttf');
+}
+
 @utility pixelated {
     image-rendering: pixelated;
 }
 
 @theme {
     --default-font-family: 'Pixellari';
-    --default-mono-font-family: 'PressStart2P';
+    --default-mono-font-family: 'DepartureMonoNerdFontMono';
 }
 
 html {

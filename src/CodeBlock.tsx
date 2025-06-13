@@ -12,11 +12,9 @@ export const CodeBlock: FC<{ children: ReactNode; className?: string }> = ({
                 className,
             )}
         >
-            <div style={{ height: 'calc-size(max-content, size * 1.5)' }}>
-                <pre className="flex origin-top-left scale-y-150 flex-col text-base">
-                    {children}
-                </pre>
-            </div>
+            <pre className="flex origin-top-left flex-col text-2xl">
+                {children}
+            </pre>
         </div>
     );
 };
