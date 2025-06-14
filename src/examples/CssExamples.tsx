@@ -607,6 +607,202 @@ const StarWarsCircleIn: FC<{ className?: string }> = ({ className }) => {
     );
 };
 
+const Batman: FC<{ className?: string }> = ({ className }) => {
+    return (
+        <CodeBlock className={className}>
+            <code>
+                <span className="PreProc">@keyframes</span>{' '}
+                <span className="-variable">batman-rotation</span>{' '}
+                <span className="-punctuation-bracket">{'{'}</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="Keyword">to</span>{' '}
+                <span className="-punctuation-bracket">{'{'}</span>
+            </code>
+            <code>
+                <span className="NonText">{'        '}</span>
+                <span className="-property-css">rotate</span>
+                <span className="Delimiter">:</span>{' '}
+                <span className="Function">calc</span>
+                <span className="-punctuation-bracket">(</span>
+                <span className="-number-css">
+                    360<span className="String">deg</span>
+                </span>{' '}
+                <span className="Operator">*</span>{' '}
+                <span className="-number-css">9</span>
+                <span className="-punctuation-bracket">)</span>
+                <span className="Delimiter">;</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="-punctuation-bracket">{'}'}</span>
+            </code>
+            <code>
+                <span className="-punctuation-bracket">{'}'}</span>
+            </code>
+            <code>
+                <span className="NonText"> </span>
+            </code>
+            <code>
+                <span className="Delimiter">::</span>
+                <span className="-tag">
+                    <span className="Constant">
+                        <span className="-type-tag-css">
+                            view-transition-new
+                        </span>
+                    </span>
+                </span>
+                <span className="-punctuation-bracket">(</span>
+                <span className="-tag">
+                    <span className="-type-tag-css">batman</span>
+                </span>
+                <span className="-punctuation-bracket">)</span>{' '}
+                <span className="-punctuation-bracket">{'{'}</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="-property-css">animation</span>
+                <span className="Delimiter">:</span>{' '}
+                <span className="-string-plain-css">batman-rotation</span>{' '}
+                <span className="Number">
+                    1.2<span className="String">s</span>
+                </span>{' '}
+                <span className="-string-plain-css">linear</span>{' '}
+                <span className="-string-plain-css">forwards</span>
+                <span className="Delimiter">;</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="-property-css">filter</span>
+                <span className="Delimiter">:</span>{' '}
+                <span className="Function">blur</span>
+                <span className="-punctuation-bracket">(</span>
+                <span className="-number-css">
+                    4<span className="String">px</span>
+                </span>
+                <span className="-punctuation-bracket">)</span>
+                <span className="Delimiter">;</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="-property-css">scale</span>
+                <span className="Delimiter">:</span>{' '}
+                <span className="Number">2.2</span>
+                <span className="Delimiter">;</span>
+            </code>
+            <code>
+                <span className="-punctuation-bracket">{'}'}</span>
+            </code>
+            <code>
+                <span className="NonText"> </span>
+            </code>
+            <code>
+                <span className="PreProc">@keyframes</span>{' '}
+                <span className="-variable">checkconf-logo-batman</span>{' '}
+                <span className="-punctuation-bracket">{'{'}</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="-number-css">
+                    50<span className="String">%</span>
+                </span>{' '}
+                <span className="-punctuation-bracket">{'{'}</span>
+            </code>
+            <code>
+                <span className="NonText">{'        '}</span>
+                <span className="-property-css">transform</span>
+                <span className="Delimiter">:</span>{' '}
+                <span className="Function">scale</span>
+                <span className="-punctuation-bracket">(</span>
+                <span className="-number-css">4</span>
+                <span className="-punctuation-bracket">)</span>
+                <span className="Delimiter">;</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="-punctuation-bracket">{'}'}</span>
+            </code>
+            <code>
+                <span className="-punctuation-bracket">{'}'}</span>
+            </code>
+            <code>
+                <span className="NonText"> </span>
+            </code>
+            <code>
+                <span className="Delimiter">::</span>
+                <span className="-tag">
+                    <span className="Constant">
+                        <span className="-type-tag-css">
+                            view-transition-new
+                        </span>
+                    </span>
+                </span>
+                <span className="-punctuation-bracket">(</span>
+                <span className="-tag">
+                    <span className="-type-tag-css">checkconf-logo-batman</span>
+                </span>
+                <span className="-punctuation-bracket">)</span>{' '}
+                <span className="-punctuation-bracket">{'{'}</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="-property-css">animation</span>
+                <span className="Delimiter">:</span>{' '}
+                <span className="-string-plain-css">checkconf-logo-batman</span>{' '}
+                <span className="Number">
+                    1.2<span className="String">s</span>
+                </span>{' '}
+                <span className="-string-plain-css">linear</span>{' '}
+                <span className="-string-plain-css">forwards</span>
+                <span className="Delimiter">;</span>
+            </code>
+            <code>
+                <span className="-punctuation-bracket">{'}'}</span>
+            </code>
+            <code>
+                <span className="NonText"> </span>
+            </code>
+            <code>
+                <span className="Delimiter">::</span>
+                <span className="-tag">
+                    <span className="Constant">
+                        <span className="-type-tag-css">
+                            view-transition-group
+                        </span>
+                    </span>
+                </span>
+                <span className="-punctuation-bracket">(</span>
+                <span className="-tag">
+                    <span className="-type-tag-css">checkconf-logo-batman</span>
+                </span>
+                <span className="-punctuation-bracket">)</span>{' '}
+                <span className="-punctuation-bracket">{'{'}</span>
+            </code>
+            <code>
+                <span className="NonText">{'    '}</span>
+                <span className="-property-css">top</span>
+                <span className="Delimiter">:</span>{' '}
+                <span className="Function">calc</span>
+                <span className="-punctuation-bracket">(</span>
+                <span className="-number-css">
+                    -1080<span className="String">px</span>
+                </span>{' '}
+                <span className="Operator">*</span>{' '}
+                <span className="Function">var</span>
+                <span className="-punctuation-bracket">(</span>
+                <span className="-variable">--zoom</span>
+                <span className="-punctuation-bracket">)</span>
+                <span className="-punctuation-bracket">)</span>
+                <span className="Delimiter">;</span>
+            </code>
+            <code>
+                <span className="-punctuation-bracket">{'}'}</span>
+            </code>
+        </CodeBlock>
+    );
+};
+
 export const CssExamples = {
     FadeIn,
     SlideFromLeft,
@@ -614,4 +810,5 @@ export const CssExamples = {
     StarWarsSimpleFromLeft,
     StarWarsSimpleFromRight,
     StarWarsCircleIn,
+    Batman,
 };

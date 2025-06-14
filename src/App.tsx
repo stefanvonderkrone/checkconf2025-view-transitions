@@ -63,15 +63,22 @@ const SLIDES = [
         <picture>
             <img alt="level up" src={LevelUp} className="w-[580px]" />
         </picture>
-        <h1 className="text-amber-400 text-shadow-lg">
-            Stop the Flash, Start the Flow
+        <h1 className="text-amber-400 uppercase text-shadow-lg">
+            Stop the Flash, <br />
+            Start the Flow
         </h1>
         <hr className="w-[920px] border-[2px] border-white" />
-        <h3 className="text-center text-amber-400 text-shadow-lg">
+        <h3 className="text-center text-white text-shadow-lg">
             Leveling Up with View Transitions
             <br />
             Stefan von der Krone | 28/06/24 | 11:15 Uhr
         </h3>
+    </Slide>,
+
+    <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds1} />}>
+        <ContentBox className="left-1/3 w-1/3">
+            <h1>View Transitions</h1>
+        </ContentBox>
     </Slide>,
 
     <Slide background={<BackgroundImage src={Backgrounds.GrasTreeClouds1} />}>
@@ -840,11 +847,24 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.Scifi3} />}
         viewTransitionName="star-wars-circle-in"
     >
-        <link rel="prefetch" href={Backgrounds.SnowyMountain2} />
         <ContentBox>
             <h1>Star Wars iris wipe</h1>
             <CssExamples.StarWarsCircleIn />
         </ContentBox>
+    </Slide>,
+
+    <Slide
+        background={<BackgroundImage src={Backgrounds.BigCityScape} />}
+        viewTransitionName="batman"
+    >
+        <link rel="prefetch" href={Backgrounds.SnowyMountain2} />
+        <ContentBox className="[view-transition-name:do-nothing-2]">
+            <h1>60s Batman TV Show</h1>
+            <CssExamples.Batman />
+        </ContentBox>
+        <picture className="absolute top-[calc(1080px_*_1.5)] left-1/2 -translate-1/2 [view-transition-name:checkconf-logo-batman]">
+            <img alt="level up" src={LevelUp} className="w-[580px]" />
+        </picture>
     </Slide>,
 
     <Slide
@@ -902,7 +922,7 @@ const SLIDES = [
         viewTransitionName="slide-from-top"
     >
         <ContentBox className="left-0 w-1/2">
-            <h1>The end</h1>
+            <h1>Q & A</h1>
             <p className="text-center">
                 Link to the repo and a README with additional material/links
             </p>
