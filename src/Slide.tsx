@@ -14,7 +14,8 @@ type ViewTransitionName =
     | 'star-wars-simple-from-left'
     | 'star-wars-simple-from-right'
     | 'star-wars-circle-in'
-    | 'star-wars-circle-out';
+    | 'star-wars-circle-out'
+    | 'batman';
 
 type ViewTransitionClassMap = {
     [Name in ViewTransitionName]: `[view-transition-name:${Name}]`;
@@ -33,6 +34,7 @@ const viewTransitionClassMap: ViewTransitionClassMap = {
     'star-wars-simple-from-right':
         '[view-transition-name:star-wars-simple-from-right]',
     'fade-in': '[view-transition-name:fade-in]',
+    batman: '[view-transition-name:batman]'
 };
 
 const Slide: FC<{

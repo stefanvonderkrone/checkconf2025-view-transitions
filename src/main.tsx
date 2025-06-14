@@ -34,13 +34,13 @@ if (!root) {
 }
 
 window.addEventListener('resize', () => {
-    root.style.setProperty(
-        'zoom',
-        Math.min(
-            window.innerHeight / 1080,
-            window.innerWidth / 1920,
-        ).toString(),
-    );
+    const zoom = Math.min(
+        window.innerHeight / 1080,
+        window.innerWidth / 1920,
+    ).toString();
+
+    root.style.setProperty('zoom', zoom);
+    document.documentElement.style.setProperty('--zoom', zoom);
 });
 window.dispatchEvent(new UIEvent('resize'));
 

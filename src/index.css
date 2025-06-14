@@ -326,6 +326,36 @@ p {
     z-index: 10;
 }
 
+@keyframes batman-rotation {
+    to {
+        rotate: calc(360deg * 9);
+    }
+}
+
+::view-transition-new(batman) {
+    animation: batman-rotation 1.2s linear forwards;
+    filter: blur(4px);
+    scale: 2.2;
+}
+
+@keyframes checkconf-logo-batman {
+    50% {
+        transform: scale(4);
+    }
+}
+
+::view-transition-new(checkconf-logo-batman) {
+    animation: checkconf-logo-batman 1.2s linear forwards;
+}
+
+::view-transition-old(checkconf-logo-batman) {
+    opacity: 0;
+}
+
+::view-transition-group(checkconf-logo-batman) {
+    top: calc(-1080px * var(--zoom));
+}
+
 @layer code {
     .-variable-parameter {
         color: #eba0ac;

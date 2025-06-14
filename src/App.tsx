@@ -218,12 +218,26 @@ const SLIDES = [
         background={<BackgroundImage src={Backgrounds.GrasTreeClouds8} />}
         viewTransitionName="star-wars-circle-in"
     >
-        <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain2} />
-        <link rel="prefetch" href="/fonts/PressStart2P.ttf" />
+        <link rel="prefetch" href={Backgrounds.BigCityScape} />
         <ContentBox>
             <h1>Examples of View Transitions</h1>
             <p>Star Wars iris wipe</p>
         </ContentBox>
+    </Slide>,
+
+    <Slide
+        background={<BackgroundImage src={Backgrounds.BigCityScape} />}
+        viewTransitionName="batman"
+    >
+        <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain2} />
+        <link rel="prefetch" href="/fonts/PressStart2P.ttf" />
+        <ContentBox className="[view-transition-name:do-nothing-2]">
+            <h1>Examples of View Transitions</h1>
+            <p>60s Batman TV Show</p>
+        </ContentBox>
+        <picture className="absolute top-[calc(1080px_*_1.5)] left-1/2 -translate-1/2 [view-transition-name:checkconf-logo-batman]">
+            <img alt="level up" src={LevelUp} className="w-[580px]" />
+        </picture>
     </Slide>,
 
     <Slide

@@ -22,6 +22,7 @@ import SnowyMountain3 from './assets/backgrounds/snowy_mountain_3.png';
 import BeatEmUp1 from './assets/backgrounds/beat_em_up_1.png';
 import BeatEmUp2 from './assets/backgrounds/beat_em_up_2.png';
 import BeatEmUp3 from './assets/backgrounds/beat_em_up_3.png';
+import BigCityScape from './assets/backgrounds/big_city_scape.png';
 
 export const Backgrounds = {
     BeatEmUp1,
@@ -48,4 +49,5 @@ export const Backgrounds = {
     SnowyMountain1,
     SnowyMountain2,
     SnowyMountain3,
+    BigCityScape,
 };
