@@ -119,6 +119,7 @@ const SLIDES = [
             <video
                 key="play"
                 autoPlay
+                loop
                 className="w-3/4 rounded-4xl border-0 drop-shadow-lg"
             >
                 <source src={iosNative} />
@@ -151,6 +152,7 @@ const SLIDES = [
             <video
                 key="play"
                 autoPlay
+                loop
                 className="w-3/4 rounded-4xl border-0 drop-shadow-lg"
             >
                 <source src={iosWebapp} />
@@ -905,6 +907,7 @@ const SLIDES = [
             <video
                 className="w-3/4 rounded-4xl border-0 drop-shadow-lg"
                 autoPlay
+                loop
             >
                 <source src={iosWebappViewTransitions} />
             </video>
