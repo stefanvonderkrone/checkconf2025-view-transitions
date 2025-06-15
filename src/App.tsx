@@ -238,7 +238,7 @@ const SLIDES = [
     >
         <link rel="prefetch" href={Backgrounds.GrasTreeCloudsMoutain2} />
         <link rel="prefetch" href="/fonts/PressStart2P.ttf" />
-        <ContentBox className="[view-transition-name:do-nothing-2]">
+        <ContentBox invert className="[view-transition-name:do-nothing-2]">
             <h1>Examples of View Transitions</h1>
             <p>60s Batman TV Show</p>
         </ContentBox>
@@ -858,7 +858,10 @@ const SLIDES = [
         viewTransitionName="batman"
     >
         <link rel="prefetch" href={Backgrounds.SnowyMountain2} />
-        <ContentBox className="[view-transition-name:do-nothing-2]">
+        <ContentBox
+            invert
+            className="left-0 [view-transition-name:do-nothing-2]"
+        >
             <h1>60s Batman TV Show</h1>
             <CssExamples.Batman />
         </ContentBox>
