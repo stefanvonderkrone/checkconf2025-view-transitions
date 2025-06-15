@@ -257,9 +257,10 @@ const SLIDES = [
             />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:slide-from-right]">
-            <h1>How do View Transitions work?</h1>
+            <h1>View Transition API</h1>
             <StartViewTransitionTypes />
         </ContentBox>
     </Slide>,
@@ -268,9 +269,10 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:fade-in-code]">
-            <h1>How do View Transitions work?</h1>
+            <h1>View Transition API</h1>
             <StartViewTransitionTypes highlightedLines={[0, 1, 2, 3, 4, 5]} />
         </ContentBox>
     </Slide>,
@@ -279,9 +281,10 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:fade-in-code]">
-            <h1>How do View Transitions work?</h1>
+            <h1>View Transition API</h1>
             <StartViewTransitionTypes
                 highlightedLines={[
                     7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
@@ -294,9 +297,10 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:fade-in-code]">
-            <h1>How do View Transitions work?</h1>
+            <h1>View Transition API</h1>
             <StartViewTransitionTypes highlightedLines={[8, 9]} />
         </ContentBox>
     </Slide>,
@@ -305,9 +309,10 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:fade-in-code]">
-            <h1>How do View Transitions work?</h1>
+            <h1>View Transition API</h1>
             <StartViewTransitionTypes highlightedLines={[11, 12]} />
         </ContentBox>
     </Slide>,
@@ -316,9 +321,10 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:fade-in-code]">
-            <h1>How do View Transitions work?</h1>
+            <h1>View Transition API</h1>
             <StartViewTransitionTypes highlightedLines={[14, 15]} />
         </ContentBox>
     </Slide>,
@@ -327,9 +333,10 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:fade-in-code]">
-            <h1>How do View Transitions work?</h1>
+            <h1>View Transition API</h1>
             <StartViewTransitionTypes highlightedLines={[17, 18]} />
         </ContentBox>
     </Slide>,
@@ -338,9 +345,10 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:fade-in-code]">
-            <h1>How do View Transitions work?</h1>
+            <h1>View Transition API</h1>
             <StartViewTransitionTypes />
         </ContentBox>
     </Slide>,
@@ -350,6 +358,7 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0">
             <h1>How do View Transitions work?</h1>
@@ -369,6 +378,7 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0">
             <h1>How do View Transitions work?</h1>
@@ -388,6 +398,7 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0">
             <h1>How do View Transitions work?</h1>
@@ -407,6 +418,7 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0">
             <h1>How do View Transitions work?</h1>
@@ -425,6 +437,7 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0">
             <h1>How do View Transitions work?</h1>
@@ -443,6 +456,7 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0">
             <h1>How do View Transitions work?</h1>
@@ -461,6 +475,7 @@ const SLIDES = [
             <BackgroundImage src={Backgrounds.GrasTreeCloudsMoutain2} />
         }
         viewTransitionName="do-nothing"
+        lightMode
     >
         <ContentBox className="right-0 [view-transition-name:slide-out-to-right]">
             <h1>How do View Transitions work?</h1>
